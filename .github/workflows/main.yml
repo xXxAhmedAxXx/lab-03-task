@@ -6,3 +6,10 @@ jobs:
     steps:
       - name: Hello World
         run: echo "hello world"
+
+  your-job:
+    needs: My-job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello World
+        run: echo "goodbye world"
